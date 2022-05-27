@@ -1,0 +1,29 @@
+ <odoo>
+  <data>
+
+   <record model="ir.ui.view" id="session_form_view">
+<field name="name">orderline.form</field>
+<field name="model">purchase.request.line</field>
+<field name="arch" type="xml">
+<form string="Session Title">
+<sheet>
+<group string="General">
+<field name="product_id"/>
+<field name="descpription"/>
+    <field name="cost_price"/>
+    <field name="quantity"/>
+    <field name="total"/>
+</group>
+</sheet>
+</form>
+</field>
+</record>
+
+<record model="ir.actions.act_window" id="session_list_action">
+<field name="name">Sessions</field>
+<field name="res_model">purchase.request.line</field>
+<field name="view_mode">tree,form</field>
+</record>
+
+        </data>
+</odoo>
